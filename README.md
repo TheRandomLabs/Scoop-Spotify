@@ -92,7 +92,7 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
 Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
 scoop install git sudo
 scoop bucket add nerd-fonts
-scoop bucket add TheRandomLabs https://github.com/TheRandomLabs/Scoop-Bucket.git
+scoop bucket add spotify https://github.com/TheRandomLabs/Scoop-Spotify.git
 sudo scoop install spotify-latest Open-Sans Raleway
 scoop install spicetify-cli
 spicetify config current_theme Elementary
@@ -106,11 +106,20 @@ reset it otherwise, which would require `blockthespot` to be run additionally at
 
 ## Notes
 
+* All of the packages in this bucket should be installed locally rather than globally.
+* If you have the means, please buy Spotify Premium instead of installing BlockTheSpot.
+* All of the Spicetify packages require Spotify to be installed either through this Scoop bucket or
+the official installer.
+* All themes, extensions and custom apps for Spicetify are installed to `~\.spicetify` instead of
+the spicetify-cli installation directory.
+* Installing or updating any of the packages in this bucket automatically applies the Spicetify
+configuration and preserves BlockTheSpot if it is installed.
+* All Spicetify packages apart from spicetify-cli depend on spicetify-cli.
+
 ### BlockTheSpot
 
-* This blocks advertisements for the latest version of Spotify. Please buy Spotify Premium instead
-to support Spotify if you have the means.
-* BlockTheSpot depends on `spotify-latest` and should thus be installed locally.
+* This blocks advertisements for the latest version of Spotify.
+* This package depends on `spotify-latest`.
 * This is not an executable program. `spotify-latest` will be patched automatically every time this
 package or any of the Spicetify packages are installed or updated.
 * If BlockTheSpot is ever reset, `blockthespot` can be run to reapply it. This usually happens
@@ -119,30 +128,15 @@ ensures that BlockTheSpot is enabled if it is installed.
 
 ### genius-spicetify
 
-* genius-spicetify should be installed locally and not globally.
 * Installing or updating genius-spicetify automatically applies the Spicetify configuration and
 preserves BlockTheSpot if it is installed.
-* It should be noted that this is installed to `~\.spicetify\CustomApps` and not the `CustomApps`
-directory in the spicetify-cli installation directory.
 * See [here](https://github.com/khanhas/genius-spicetify#musicxmatch) to configure a custom
 Musixmatch user token. `manifest.json` can be found at
 `~\.spicetify\CustomApps\genius\manifest.json`.
 
-### google-spicetify
-
-* google-spicetify should be installed locally and not globally.
-* Installing or updating google-spicetify automatically applies the Spicetify configuration and
-preserves BlockTheSpot if it is installed.
-* It should be noted that this is installed to `~\.spicetify\Themes` and not the `Themes`
-directory in the spicetify-cli installation directory.
-
 ### spicetify-autoVolume
 
 * spicetify-autoVolume should be installed locally and not globally.
-* Installing or updating genius-spicetify automatically applies the Spicetify configuration and
-preserves BlockTheSpot if it is installed.
-* It should be noted that this is installed to `~\.spicetify\Extensions` and not the `Extensions`
-directory in the spicetify-cli installation directory.
 * See
 [here](https://github.com/amanharwara/spicetify-autoVolume#changing-the-intervalminimum-volume)
 to modify the configuration. `autoVolume.js` can be found at
@@ -150,26 +144,16 @@ to modify the configuration. `autoVolume.js` can be found at
 
 ### spicetify-cli
 
-* spicetify-cli should be installed locally and not globally.
-* spicetify-cli requires Spotify to be installed through either Scoop or the normal method.
-* Installing or updating this package automatically applies the Spicetify configuration and
-preserves BlockTheSpot if it is installed.
 * Experimental features, fast user switching and all
 [default extensions](https://github.com/khanhas/spicetify-cli/wiki/Extensions) apart from
 Auto Skip Videos, DJ Mode and Trash Bin are enabled by default.
 * `spicetify-apply` is should be run instead of `spicetify apply` if BlockTheSpot is installed, as
 it ensures that BlockTheSpot is enabled if it is installed.
 * It should be noted that `spicetify-apply` also runs `spicetify restore` and `spicetify backup`
-before running `spicetify apply` to ensure that changes are applied.
+before running `spicetify apply` to ensure that changes are applied every time.
 
 ### spicetify-themes
 
-* spicetify-themes should be installed locally and not globally.
-spicetify-cli is declared as a dependency and is installed automatically.
-* Installing or updating this package automatically applies the Spicetify configuration and
-preserves BlockTheSpot if it is installed.
-* It should be noted that this is installed to `~\.spicetify\Themes` and not the `Themes`
-directory in the spicetify-cli installation directory.
 * The [Elementary](https://github.com/morpheusthewhite/spicetify-themes/tree/master/Elementary)
 theme requires the Open Sans and Raleway fonts:
 
@@ -196,8 +180,6 @@ $ sudo scoop install Ubuntu-NF
 which can be done most easily using `sudo`.
 * However, `scoop uninstall spotify-blockthespot` does not have to be run as administrator.
 * This cannot be installed concurrently with `spotify-latest`.
-* Installing or updating this package automatically applies the Spicetify configuration if it is
-installed.
 
 ### Spotify (latest)
 
@@ -207,5 +189,3 @@ this version installs completely silently and to the Scoop directory.
 * Spotify's built-in updater is disabled, and Scoop should be used to update it instead.
 * Spotify should be installed locally and not globally.
 * This cannot be installed concurrently with `spotify-blockthespot`.
-* Installing or updating this package automatically applies the Spicetify configuration and
-preserves BlockTheSpot if it is installed.
