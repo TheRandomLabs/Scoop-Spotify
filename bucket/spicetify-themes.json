@@ -16,9 +16,7 @@
     "extract_dir": "spicetify-themes-master",
     "installer": {
         "script": [
-            "$spotify_path = get-spotify-path",
-            "",
-            "if (-not (Test-Path $spotify_path)) {",
+            "if (-not (Test-Path (get-spotify-path))) {",
             "    Write-Host \"Spotify must be installed to install $app.\" -Foreground Red",
             "    exit 1",
             "}",

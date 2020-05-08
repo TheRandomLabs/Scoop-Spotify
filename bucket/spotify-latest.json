@@ -10,7 +10,7 @@
     "hash": "77c953863c5882ba78796c192044cbea3841dbdab02a4b2b9237793991e17285",
     "installer": {
         "script": [
-            "if (Test-Path \"$(appdir spotify-blockthespot)\") {",
+            "if (Test-Path (appdir spotify-blockthespot)) {",
             "    Write-Host \"$app and spotify-blockthespot cannot both be installed at the same time.\" -Foreground Red",
             "    exit 1",
             "}",
@@ -28,8 +28,8 @@
         ]
     },
     "post_install": [
-        "if (Test-Path \"$(appdir spicetify-cli)\") { init-spicetify-config-and-apply }",
-        "elseif (Test-Path \"$(appdir blockthespot)\") { blockthespot }"
+        "if (Test-Path (appdir spicetify-cli)) { init-spicetify-config-and-apply }",
+        "elseif (Test-Path (appdir blockthespot)) { blockthespot }"
     ],
     "uninstaller": {
         "script": [
