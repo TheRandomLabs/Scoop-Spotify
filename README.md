@@ -10,7 +10,7 @@ A [Scoop](https://github.com/lukesampson/scoop) bucket for Spotify and related p
 
 	$ scoop bucket add spotify https://github.com/TheRandomLabs/Scoop-Spotify.git
 
-## Customizing Spotify
+## Installing and customizing Spotify
 
 First, the latest version of Spotify should be installed:
 
