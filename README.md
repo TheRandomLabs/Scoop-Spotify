@@ -77,7 +77,7 @@ can be installed to automatically decrease the volume at specific intervals of t
 
 	$ scoop install spicetify-autovolume
 
-BlockTheSpot can be installed to block advertisements:
+[BlockTheSpot](https://github.com/mrpond/BlockTheSpot) can be installed to block advertisements:
 
 	$ scoop install blockthespot
 
@@ -172,13 +172,14 @@ $ sudo scoop install Ubuntu-NF
 
 ### Spotify with BlockTheSpot
 
-* This is an outdated version of Spotify (1.1.4.197.g92d52c4f) with BlockTheSpot.
+* This is an outdated version of Spotify (1.1.4.197.g92d52c4f) with an
+[old version of BlockTheSpot](https://github.com/master131/BlockTheSpot).
 * Spotify's built-in updater is disabled.
 * This should only be used if BlockTheSpot does not work with the latest version of Spotify.
 * Spotify with BlockTheSpot should be installed locally and not globally.
-* `scoop install spotify-blockthespot` must be run as administrator,
+* `scoop install spotify-with-blockthespot` must be run as administrator,
 which can be done most easily using `sudo`.
-* However, `scoop uninstall spotify-blockthespot` does not have to be run as administrator.
+* However, `scoop uninstall spotify-with-blockthespot` does not have to be run as administrator.
 * This cannot be installed concurrently with `spotify-latest`.
 
 ### Spotify (latest)
@@ -188,4 +189,4 @@ which can be done most easily using `sudo`.
 this version installs completely silently and to the Scoop directory.
 * Spotify's built-in updater is disabled, and Scoop should be used to update it instead.
 * Spotify should be installed locally and not globally.
-* This cannot be installed concurrently with `spotify-blockthespot`.
+* This cannot be installed concurrently with `spotify-with-blockthespot`.
