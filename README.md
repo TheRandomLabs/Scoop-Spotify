@@ -72,6 +72,11 @@ from Genius or Musixmatch:
 
 	$ scoop install genius-spicetify
 
+[spicetify-autoVolume](https://github.com/amanharwara/spicetify-autoVolume#changing-the-intervalminimum-volume)
+can be installed to automatically decrease the volume at specific intervals of time:
+
+	$ scoop install spicetify-autovolume
+
 BlockTheSpot can be installed to block advertisements:
 
 	$ scoop install blockthespot
@@ -79,8 +84,8 @@ BlockTheSpot can be installed to block advertisements:
 All of the above packages can be updated through Scoop.
 
 If you don't care about reading any of this and just want a quick way to install ad-blocked Spotify
-with the Elementary theme, genius-spicetify and developer tools, copy and paste this into
-PowerShell:
+with the Elementary theme, genius-spicetify, spicetify-autoVolume and developer tools, copy and
+paste this into PowerShell:
 
 ```powershell
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
@@ -91,7 +96,7 @@ scoop bucket add TheRandomLabs https://github.com/TheRandomLabs/Scoop-Bucket.git
 sudo scoop install spotify-latest Open-Sans Raleway
 scoop install spicetify-cli
 spicetify config current_theme Elementary
-scoop install spicetify-themes genius-spicetify
+scoop install spicetify-themes genius-spicetify spicetify-autovolume
 spicetify enable-devtool
 scoop install blockthespot
 ```
@@ -100,10 +105,6 @@ The reason BlockTheSpot is installed last above is because running `spicetify en
 reset it otherwise, which would require `blockthespot` to be run additionally at the end.
 
 ## Notes
-
-### AOMEI Partition Assistant Standard
-
-* The installer and uninstaller open a webpage upon completion.
 
 ### BlockTheSpot
 
@@ -115,35 +116,9 @@ package or any of the Spicetify packages are installed or updated.
 after running Spicetify commands, and running `spicetify-apply` rather than `spicetify apply`
 ensures that BlockTheSpot is enabled if it is installed.
 
-### Corsair iCUE
-
-* `scoop uninstall corsair-icue` should not be run as administrator until
-[this](https://github.com/lukesampson/scoop/issues/2952#issuecomment-542531849) is resolved.
-* This means that `scoop update corsair-icue` also cannot be run as administrator and will show
-two UAC dialogs.
-* Alternatively, the following commands can be run prior to running
-`scoop uninstall corsair-icue` or `scoop update corsair-icue` as administrator:
-
-```powershell
-$icue_path = "$(Split-Path(scoop prefix corsair-icue))\*"
-Get-Process | Where-Object { $_.Path -Like "$icue_path" } | Stop-Process -Force
-```
-
-### Custom Resolution Utility
-
-* This is the same as `cru` from the `extras` bucket, but it also has better shortcuts and shims.
-
-### FFmpeg for Audacity
-
-* This version (2.2.11) is more up-to-date than the one found in
-[rasa's bucket](https://github.com/rasa/scoops) (2.2.2).
-* It should also be noted that LAME now comes packaged with Audacity and therefore no longer has
-to be installed separately.
-
 ### genius-spicetify
 
 * genius-spicetify should be installed locally and not globally.
-* genius-spicetify requires Spotify to be installed.
 * Installing or updating genius-spicetify automatically applies the Spicetify configuration and
 preserves BlockTheSpot if it is installed.
 * It should be noted that this is installed to `~\.spicetify\CustomApps` and not the `CustomApps`
@@ -155,35 +130,27 @@ Musixmatch user token. `manifest.json` can be found at
 ### google-spicetify
 
 * google-spicetify should be installed locally and not globally.
-* google-spicetify requires Spotify to be installed.
 * Installing or updating google-spicetify automatically applies the Spicetify configuration and
 preserves BlockTheSpot if it is installed.
 * It should be noted that this is installed to `~\.spicetify\Themes` and not the `Themes`
 directory in the spicetify-cli installation directory.
 
-### Luyten
+### spicetify-autoVolume
 
-* I'll PR this to the `extras` bucket once
-[deathmarine/Luyten#175](https://github.com/deathmarine/Luyten/issues/175) is resolved.
-
-### MuseScore Nightly with File Associations
-
-* This is identical to `musescore-nightly` in the `versions` bucket, except that file associations
-are automatically registered.
-* This is a concept that I'd like to eventually expand to other manifests.
-
-### Neovim Dev
-
-* This is the same as `neovim-nightly` in the `versions` bucket, except that autoupdate is enabled.
-
-### ShellExView
-
-* This manifest is a slightly improved version of `shellexview` from the `nirsoft` bucket.
+* spicetify-autoVolume should be installed locally and not globally.
+* Installing or updating genius-spicetify automatically applies the Spicetify configuration and
+preserves BlockTheSpot if it is installed.
+* It should be noted that this is installed to `~\.spicetify\Extensions` and not the `Extensions`
+directory in the spicetify-cli installation directory.
+* See
+[here](https://github.com/amanharwara/spicetify-autoVolume#changing-the-intervalminimum-volume)
+to modify the configuration. `autoVolume.js` can be found at
+`~\.spicetify\Extensions\autoVolume.js`.
 
 ### spicetify-cli
 
 * spicetify-cli should be installed locally and not globally.
-* spicetify-cli requires Spotify to be installed.
+* spicetify-cli requires Spotify to be installed through either Scoop or the normal method.
 * Installing or updating this package automatically applies the Spicetify configuration and
 preserves BlockTheSpot if it is installed.
 * Experimental features, fast user switching and all
@@ -197,7 +164,6 @@ before running `spicetify apply` to ensure that changes are applied.
 ### spicetify-themes
 
 * spicetify-themes should be installed locally and not globally.
-* spicetify-themes requires Spotify to be installed.
 spicetify-cli is declared as a dependency and is installed automatically.
 * Installing or updating this package automatically applies the Spicetify configuration and
 preserves BlockTheSpot if it is installed.
@@ -242,22 +208,3 @@ this version installs completely silently and to the Scoop directory.
 * This cannot be installed concurrently with `spotify-blockthespot`.
 * Installing or updating this package automatically applies the Spicetify configuration and
 preserves BlockTheSpot if it is installed.
-
-### QTTabBar
-
-* The installer shows a dialog that requires user interaction.
-* The installer may show an error related to start menu items. This can be safely ignored.
-
-### Win10 Initial Setup Script
-
-* This is a PowerShell script for the automation of routine setup tasks completed on fresh
-installations of Windows.
-* Default setup can be run via `default-win10-initial-setup`.
-* See [here](https://github.com/Disassembler0/Win10-Initial-Setup-Script#advanced-usage)
-for advanced usage.
-
-### Windows SDK Signing Tools
-
-* This is just `cert2spc.exe`, `makecat.exe` and `signtool.exe` extracted from the Windows SDK.
-* This is useful for those who need to sign executables but have no need for the rest of the
-Windows SDK.
