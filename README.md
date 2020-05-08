@@ -108,7 +108,8 @@ reset it otherwise, which would require `blockthespot` to be run additionally at
 
 ### BlockTheSpot
 
-* This blocks advertisements for the latest version of Spotify.
+* This blocks advertisements for the latest version of Spotify. Please buy Spotify Premium instead
+to support Spotify if you have the means.
 * BlockTheSpot depends on `spotify-latest` and should thus be installed locally.
 * This is not an executable program. `spotify-latest` will be patched automatically every time this
 package or any of the Spicetify packages are installed or updated.
