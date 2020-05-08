@@ -6,7 +6,7 @@
 
 # Scoop-Spotify
 
-A [Scoop](https://github.com/lukesampson/scoop) bucket for Spotify and related packages.
+A [Scoop](https://github.com/lukesampson/scoop) bucket for Spotify, Spicetify and related packages.
 
 	$ scoop bucket add spotify https://github.com/TheRandomLabs/Scoop-Spotify.git
 
