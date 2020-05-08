@@ -29,7 +29,7 @@
     },
     "post_install": [
         "if (Test-Path \"$(appdir spicetify-cli)\") { init-spicetify-config-and-apply }",
-        "elseif(Test-Path \"$(appdir blockthespot)\") { blockthespot }"
+        "elseif (Test-Path \"$(appdir blockthespot)\") { blockthespot }"
     ],
     "uninstaller": {
         "script": [
