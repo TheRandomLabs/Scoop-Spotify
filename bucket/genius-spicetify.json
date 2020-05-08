@@ -39,7 +39,7 @@
     "uninstaller": {
         "script": [
             "# Persist manifest",
-            "Get-ChildItem \"$env:USERPROFILE\\.spicetify\\CustomApps\\genius\" -Exclude 'manifest.json' | ForEach-Object {Remove-Item -Recurse -ErrorAction Ignore $_ }",
+            "Get-ChildItem \"$env:USERPROFILE\\.spicetify\\CustomApps\\genius\" -Exclude 'manifest.json' | ForEach-Object { Remove-Item -Recurse -ErrorAction Ignore $_ }",
             "",
             "spicetify-config-remove custom_apps genius",
             "init-spicetify-config-and-apply"
