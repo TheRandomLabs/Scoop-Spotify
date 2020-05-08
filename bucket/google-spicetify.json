@@ -30,7 +30,7 @@
         ]
     },
     "uninstaller": {
-        "script": "Get-ChildItem \"$dir\" | ForEach-Object { Remove-Item -Recurse -ErrorAction Ignore \"$env:USERPROFILE\\.spicetify\\Themes\\$($_.Name)\" }"
+        "script": "Remove-Item -Recurse -ErrorAction Ignore \"$env:USERPROFILE\\.spicetify\\Themes\\google-spicetify\""
     },
     "checkver": {
         "url": "https://api.github.com/repos/khanhas/google-spicetify/commits",
