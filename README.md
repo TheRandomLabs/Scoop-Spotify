@@ -162,7 +162,7 @@ $ scoop bucket add nerd-fonts
 $ sudo scoop install Open-Sans Raleway
 ```
 
-* The [ShadowCustom](https://github.com/morpheusthewhite/spicetify-themes/tree/master/ShadowCustom)
+* The [WintergatanBlueprint](https://github.com/morpheusthewhite/spicetify-themes/tree/master/WintergatanBlueprint)
 theme requires the Ubuntu font:
 
 ```

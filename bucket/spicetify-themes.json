@@ -9,7 +9,7 @@
     "notes": [
         "The Elementary theme requires the Open Sans and Raleway fonts:",
         "sudo scoop install open-sans raleway",
-        "The ShadowCustom theme requires the Ubuntu font:",
+        "The WintergatanBlueprint theme requires the Ubuntu font:",
         "scoop bucket add nerd-fonts",
         "sudo scoop install Ubuntu-NF"
     ],
