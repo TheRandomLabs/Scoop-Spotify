@@ -5,8 +5,8 @@
     "license": "GPL-3.0-only",
     "suggest": {
         "Spotify": [
-            "spotify-blockthespot",
-            "spotify-latest"
+            "spotify-latest",
+            "spotify-with-blockthespot"
         ]
     },
     "url": "https://github.com/khanhas/spicetify-cli/releases/download/v0.9.9/spicetify-0.9.9-windows-x64.zip",
