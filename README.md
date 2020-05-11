@@ -189,4 +189,6 @@ which can be done most easily using `sudo`.
 this version installs completely silently and to the Scoop directory.
 * Spotify's built-in updater is disabled, and Scoop should be used to update it instead.
 * Spotify should be installed locally and not globally.
+* `spotify-latest` and `spotify` are equivalent. `spotify-latest` exists to prevent conflicts with
+other buckets.
 * This cannot be installed concurrently with `spotify-with-blockthespot`.
