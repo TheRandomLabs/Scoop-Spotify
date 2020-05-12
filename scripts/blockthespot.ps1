@@ -1,7 +1,7 @@
 $spotify_path = scoop which Spotify
 
 if (-not $spotify_path) {
-    Write-Error "The spotify-latest` package is not installed."
+    Write-Error "The `spotify-latest` package is not installed."
     exit 1
 }
 
