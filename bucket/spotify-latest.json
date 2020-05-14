@@ -1,13 +1,13 @@
 {
-    "version": "1.1.30.658.gf13cde74",
+    "version": "1.1.32.618.gda5638a6",
     "description": "Digital music service.",
     "homepage": "https://www.spotify.com/",
     "license": {
         "identifier": "Freeware",
         "url": "https://www.spotify.com/au/legal/end-user-agreement/"
     },
-    "url": "https://download.spotify.com/SpotifyFullSetup.exe",
-    "hash": "77c953863c5882ba78796c192044cbea3841dbdab02a4b2b9237793991e17285",
+    "url": "https://download.scdn.co/SpotifyFullSetup.exe",
+    "hash": "0c34185f5521a0adb63f327ac15eeba88ab4a0f3d515a4045d1868dd0166cd8b",
     "installer": {
         "script": [
             "if (Test-Path (appdir spotify-blockthespot)) {",
@@ -50,7 +50,7 @@
     "persist": "config.ini",
     "checkver_": {
         "script": [
-            "Invoke-WebRequest https://download.spotify.com/SpotifyFullSetup.exe -OutFile \"SpotifyFullSetup.exe\"",
+            "Invoke-WebRequest https://download.scdn.co/SpotifyFullSetup.exe -OutFile \"SpotifyFullSetup.exe\"",
             "$version = Get-ChildItem SpotifyFullSetup.exe | ForEach-Object { $_.VersionInfo.ProductVersion }",
             "Remove-Item \"SpotifyFullSetup.exe\"",
             "return \"$version\""
@@ -58,6 +58,6 @@
         "regex": "(.+)"
     },
     "autoupdate": {
-        "url": "https://download.spotify.com/SpotifyFullSetup.exe"
+        "url": "https://download.scdn.co/SpotifyFullSetup.exe"
     }
 }
