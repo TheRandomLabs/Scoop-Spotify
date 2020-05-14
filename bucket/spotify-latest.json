@@ -53,7 +53,7 @@
             "Invoke-WebRequest https://download.scdn.co/SpotifyFullSetup.exe -OutFile \"SpotifyFullSetup.exe\"",
             "$version = Get-ChildItem SpotifyFullSetup.exe | ForEach-Object { $_.VersionInfo.ProductVersion }",
             "Remove-Item \"SpotifyFullSetup.exe\"",
-            "return \"$version\""
+            "return $version"
         ],
         "regex": "(.+)"
     },
