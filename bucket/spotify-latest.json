@@ -50,10 +50,10 @@
     "persist": "config.ini",
     "checkver_": {
         "script": [
-            "Invoke-WebRequest https://download.scdn.co/SpotifyFullSetup.exe -OutFile \"SpotifyFullSetup.exe\"",
+            "Invoke-WebRequest https://download.scdn.co/SpotifyFullSetup.exe -OutFile 'SpotifyFullSetup.exe'",
             "$version = Get-ChildItem SpotifyFullSetup.exe | ForEach-Object { $_.VersionInfo.ProductVersion }",
-            "Remove-Item \"SpotifyFullSetup.exe\"",
-            "return \"$version\""
+            "Remove-Item 'SpotifyFullSetup.exe'",
+            "return $version"
         ],
         "regex": "(.+)"
     },
