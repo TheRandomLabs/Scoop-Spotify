@@ -11,7 +11,8 @@
         "sudo scoop install open-sans raleway",
         "The WintergatanBlueprint theme requires the Ubuntu font:",
         "scoop bucket add nerd-fonts",
-        "sudo scoop install Ubuntu-NF"
+        "sudo scoop install Ubuntu-NF",
+        "A preview of all of the themes can be found here: https://github.com/morpheusthewhite/spicetify-themes/wiki/Themes-preview"
     ],
     "extract_dir": "spicetify-themes-master",
     "installer": {
