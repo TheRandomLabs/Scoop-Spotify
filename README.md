@@ -143,7 +143,6 @@ Musixmatch user token. `manifest.json` can be found at
 
 ### spicetify-autoVolume
 
-* spicetify-autoVolume should be installed locally and not globally.
 * See
 [here](https://github.com/amanharwara/spicetify-autoVolume#changing-the-intervalminimum-volume)
 to modify the configuration. `autoVolume.js` can be found at
