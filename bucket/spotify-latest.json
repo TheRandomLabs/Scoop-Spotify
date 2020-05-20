@@ -8,8 +8,14 @@
     },
     "url": "https://download.scdn.co/SpotifyFullSetup.exe",
     "hash": "0c34185f5521a0adb63f327ac15eeba88ab4a0f3d515a4045d1868dd0166cd8b",
+    "notes": "--purge should be used to fully uninstall this package.",
     "installer": {
         "script": [
+            "if ($global) {",
+            "    Write-Host \"$app cannot be installed globally.\" -Foreground Red",
+            "    exit 1",
+            "}",
+            "",
             "if (Test-Path (appdir spotify-blockthespot)) {",
             "    Write-Host \"$app and spotify-blockthespot cannot both be installed at the same time.\" -Foreground Red",
             "    exit 1",
@@ -34,10 +40,11 @@
     "uninstaller": {
         "script": [
             "Stop-Process -ErrorAction Ignore -Name Spotify",
-            "Move-Item -ErrorAction Ignore -Force \"$env:APPDATA\\Spotify\" -Destination \"$env:APPDATA\\Spotify.original\" | Out-Null",
+            "if (-not $purge) { Move-Item -ErrorAction Ignore -Force \"$env:APPDATA\\Spotify\" -Destination \"$env:APPDATA\\Spotify.original\" }",
             "Start-Process -Wait \"$dir\\Spotify.exe\" -ArgumentList '/Uninstall', '/Silent'",
-            "Move-Item -ErrorAction Ignore -Force \"$env:APPDATA\\Spotify.original\" -Destination \"$env:APPDATA\\Spotify\" | Out-Null",
-            "icacls \"$env:LOCALAPPDATA\\Spotify\\Update\" /grant Everyone:R | Out-Null"
+            "if (-not $purge) { Move-Item -ErrorAction Ignore -Force \"$env:APPDATA\\Spotify.original\" -Destination \"$env:APPDATA\\Spotify\" }",
+            "icacls \"$env:LOCALAPPDATA\\Spotify\\Update\" /grant Everyone:R | Out-Null",
+            "Remove-Item -ErrorAction Ignore -Recurse -Force \"$env:LOCALAPPDATA\\Spotify\\Update\""
         ]
     },
     "bin": "Spotify.exe",

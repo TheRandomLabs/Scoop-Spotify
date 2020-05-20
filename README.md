@@ -106,7 +106,7 @@ reset it otherwise, which would require `blockthespot` to be run additionally at
 
 ## Notes
 
-* All of the packages in this bucket should be installed locally rather than globally.
+* None of the packages in this bucket can be installed globally.
 * If you have the means, please buy Spotify Premium instead of installing BlockTheSpot.
 * All of the Spicetify packages require Spotify to be installed either through this Scoop bucket or
 the official installer.
@@ -115,6 +115,8 @@ the spicetify-cli installation directory.
 * Installing or updating any of the packages in this bucket automatically applies the Spicetify
 configuration and preserves BlockTheSpot if it is installed.
 * All Spicetify packages apart from spicetify-cli depend on spicetify-cli.
+* `--purge` or `-p` should be used to fully uninstall all packages apart from `blockthespot`,
+`google-spicetify` and `spicetify-themes`.
 
 ### BlockTheSpot
 

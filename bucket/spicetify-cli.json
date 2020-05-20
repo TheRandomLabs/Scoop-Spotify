@@ -11,9 +11,17 @@
     },
     "url": "https://github.com/khanhas/spicetify-cli/releases/download/v0.9.9/spicetify-0.9.9-windows-x64.zip",
     "hash": "66a22603ad57a3ac2c73ab87cc092a110916367c70a6868c8b02d53f464a5a57",
-    "notes": "Run `spicetify-apply` instead of `spicetify apply` to apply changes, especially if `blockthespot` is also installed.",
+    "notes": [
+        "Run `spicetify-apply` instead of `spicetify apply` to ensure changes are applied correctly, especially if `blockthespot` is also installed.",
+        "--purge should be used to fully uninstall this package."
+    ],
     "installer": {
         "script": [
+            "if ($global) {",
+            "    Write-Host \"$app cannot be installed globally.\" -Foreground Red",
+            "    exit 1",
+            "}",
+            "",
             "$null, $bucket = find_manifest($app)",
             "$bucketdir = Find-BucketDirectory($bucket)",
             "'get-spotify-path', 'init-spicetify-config', 'init-spicetify-config-and-apply', 'spicetify-apply', 'spicetify-config-remove' | ForEach-Object { Copy-Item \"$bucketdir\\..\\scripts\\$_.ps1\" -Destination \"$dir\\$_.ps1\" }",
@@ -32,7 +40,8 @@
             "Stop-Process -ErrorAction Ignore -Name Spotify",
             "spicetify restore --quiet --no-restart",
             "if (Test-Path (appdir blockthespot)) { blockthespot }",
-            "if ($spotify_running) { Start-Process \"$(scoop which Spotify)\" }"
+            "if ($spotify_running) { Start-Process \"$(scoop which Spotify)\" }",
+            "if ($purge) { Remove-Item -ErrorAction Ignore -Recurse \"$env:USERPROFILE\\.spicetify\" }"
         ]
     },
     "bin": [
