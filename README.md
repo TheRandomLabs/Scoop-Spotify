@@ -98,15 +98,16 @@ spicetify config current_theme Elementary --quiet
 spicetify-enable-devtool -quiet
 ```
 
-**Or even shorter**, but with Adapta-Nokto instead, you can copy and paste the following command.
-I made this mostly for people who don't care about using Scoop and just need a foolproof way to
-set everything up automatically.
+**Or even shorter**, but with Adapta-Nokto instead:
 
 ```powershell
 $ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force; iwr -useb https://raw.githubusercontent.com/TheRandomLabs/Scoop-Spotify/master/basic-setup.ps1 | iex
 ```
 
-And to update any installed packages:
+I wrote the above script mostly for people who don't care about using Scoop and just need a
+foolproof way to set everything up automatically.
+
+And in the future, if you want to update any installed packages:
 
 ```powershell
 $ scoop update *
