@@ -90,19 +90,18 @@ paste this into PowerShell:
 ```powershell
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
 Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
-scoop install git sudo
-scoop bucket add nerd-fonts
-scoop bucket add spotify https://github.com/TheRandomLabs/Scoop-Spotify.git
-sudo scoop install spotify-latest Open-Sans Raleway
-scoop install spicetify-cli
-spicetify config current_theme Elementary
-scoop install spicetify-themes genius-spicetify spicetify-autovolume
-spicetify enable-devtool
-scoop install blockthespot
-```
 
-The reason BlockTheSpot is installed last above is because running `spicetify enable-devtool` would
-reset it otherwise, which would require `blockthespot` to be run additionally at the end.
+scoop install git sudo
+
+scoop bucket add nerd-fonts
+sudo scoop install Open-Sans Raleway --global
+
+scoop bucket add spotify https://github.com/TheRandomLabs/Scoop-Spotify.git
+scoop install spotify-latest blockthespot spicetify-cli spicetify-themes genius-spicetify spicetify-autovolume
+
+spicetify config current_theme Elementary
+spicetify-enable-devtool
+```
 
 ## Notes
 
@@ -153,13 +152,26 @@ Auto Skip Videos, DJ Mode and Trash Bin are enabled by default.
 it ensures that BlockTheSpot is enabled if it is installed.
 * It should be noted that `spicetify-apply` also runs `spicetify restore` and `spicetify backup`
 before running `spicetify apply` to ensure that changes are applied every time.
+* For similar reasons, `spicetify-enable-devtool` and `spicetify-disable-devtool` should be run
+instead of `spicetify enable-devtool` and `spicetify disable-devtool`.
+* To remove a custom app from the configuration, run:
+
+```powershell
+$ spicetify-config-remove custom_apps <app>
+```
+
+* To remove an extension from the configuration, run:
+
+```powershell
+$ spicetify-config-remove extensions <extension>
+```
 
 ### spicetify-themes
 
 * The [Elementary](https://github.com/morpheusthewhite/spicetify-themes/tree/master/Elementary)
 theme requires the Open Sans and Raleway fonts:
 
-```
+```powershell
 $ scoop bucket add nerd-fonts
 $ sudo scoop install Open-Sans Raleway
 ```
@@ -167,7 +179,7 @@ $ sudo scoop install Open-Sans Raleway
 * The [WintergatanBlueprint](https://github.com/morpheusthewhite/spicetify-themes/tree/master/WintergatanBlueprint)
 theme requires the Ubuntu font:
 
-```
+```powershell
 $ scoop bucket add nerd-fonts
 $ sudo scoop install Ubuntu-NF
 ```
@@ -179,9 +191,7 @@ $ sudo scoop install Ubuntu-NF
 * Spotify's built-in updater is disabled.
 * This should only be used if BlockTheSpot does not work with the latest version of Spotify.
 * Spotify with BlockTheSpot should be installed locally and not globally.
-* `scoop install spotify-with-blockthespot` must be run as administrator,
-which can be done most easily using `sudo`.
-* However, `scoop uninstall spotify-with-blockthespot` does not have to be run as administrator.
+* Installation and uninstallation of this package require administrator privileges.
 * This cannot be installed concurrently with `spotify-latest`.
 
 ### Spotify (latest)

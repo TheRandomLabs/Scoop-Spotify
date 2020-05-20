@@ -56,6 +56,11 @@
     "post_install": "if (Test-Path (appdir spicetify-cli)) { init-spicetify-config-and-apply }",
     "uninstaller": {
         "script": [
+            "if (!(is_admin)) {",
+            "    error \"Administrator rights are required to uninstall $app.\"",
+            "    exit 1",
+            "}",
+            "",
             "Stop-Process -ErrorAction Ignore -Name Spotify | Out-Null",
             "if (-not $purge) { Move-Item -ErrorAction Ignore -Force \"$env:APPDATA\\Spotify\" -Destination \"$env:APPDATA\\Spotify.original\" }",
             "Start-Process -Wait \"$dir\\Spotify.exe\" -ArgumentList '/Uninstall', '/Silent'",
