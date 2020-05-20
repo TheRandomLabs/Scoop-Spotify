@@ -40,7 +40,7 @@
             "$spotify_running = Get-Process -ErrorAction Ignore -Name Spotify",
             "init-spicetify-config",
             "spicetify config custom_apps genius --quiet",
-            "spicetify-apply",
+            "spicetify-apply -quiet",
             "if ($spotify_running) { Start-Process \"$spotify_path\" }"
         ]
     },

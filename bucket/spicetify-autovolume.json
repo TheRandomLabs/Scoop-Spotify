@@ -45,7 +45,7 @@
             "$spotify_running = Get-Process -ErrorAction Ignore -Name Spotify",
             "init-spicetify-config",
             "spicetify config extensions autoVolume.js --quiet",
-            "spicetify-apply",
+            "spicetify-apply -quiet",
             "if ($spotify_running) { Start-Process \"$spotify_path\" }"
         ]
     },

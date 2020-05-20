@@ -99,8 +99,8 @@ sudo scoop install Open-Sans Raleway --global
 scoop bucket add spotify https://github.com/TheRandomLabs/Scoop-Spotify.git
 scoop install spotify-latest blockthespot spicetify-cli spicetify-themes genius-spicetify spicetify-autovolume
 
-spicetify config current_theme Elementary
-spicetify-enable-devtool
+spicetify config current_theme Elementary --quiet
+spicetify-enable-devtool -quiet
 ```
 
 ## Notes
@@ -154,6 +154,7 @@ it ensures that BlockTheSpot is enabled if it is installed.
 before running `spicetify apply` to ensure that changes are applied every time.
 * For similar reasons, `spicetify-enable-devtool` and `spicetify-disable-devtool` should be run
 instead of `spicetify enable-devtool` and `spicetify disable-devtool`.
+* The three above commands also support the `-quiet` switch.
 * To remove a custom app from the configuration, run:
 
 ```powershell
