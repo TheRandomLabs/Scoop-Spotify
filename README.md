@@ -103,6 +103,12 @@ spicetify config current_theme Elementary --quiet
 spicetify-enable-devtool -quiet
 ```
 
+And to update any installed packages:
+
+```powershell
+$ scoop update *
+```
+
 ## Notes
 
 * None of the packages in this bucket can be installed globally.
