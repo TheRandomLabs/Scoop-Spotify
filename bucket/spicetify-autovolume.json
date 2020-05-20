@@ -7,7 +7,7 @@
     "url": "https://github.com/amanharwara/spicetify-autoVolume/archive/master.zip",
     "hash": "ff2367d95bc3bc2aaa004e06701df721e1fdf68d0c769bf995317a03fa811fae",
     "notes": [
-        "See here for configuration options: https://github.com/amanharwara/spicetify-autoVolume#changing-the-intervalminimum-volume".
+        "See here for configuration options: https://github.com/amanharwara/spicetify-autoVolume#changing-the-intervalminimum-volume",
         "--purge should be used to fully uninstall this package."
     ],
     "extract_dir": "spicetify-autoVolume-master",
