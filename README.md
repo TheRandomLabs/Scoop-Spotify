@@ -83,9 +83,9 @@ can be installed to automatically decrease the volume at specific intervals of t
 
 All of the above packages can be updated through Scoop.
 
-If you don't care about reading any of this and just want a quick way to install ad-blocked Spotify
-with the Elementary theme, genius-spicetify, spicetify-autoVolume and developer tools, copy and
-paste this into PowerShell:
+**If you don't care about reading any of this** and just want a quick way to install ad-blocked
+Spotify with the Elementary theme, genius-spicetify, spicetify-autoVolume and developer tools,
+copy and paste this into PowerShell:
 
 ```powershell
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
