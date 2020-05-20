@@ -10,6 +10,8 @@ A [Scoop](https://github.com/lukesampson/scoop) bucket for Spotify, Spicetify an
 
 	$ scoop bucket add spotify https://github.com/TheRandomLabs/Scoop-Spotify.git
 
+...I've spent an unhealthy amount of time on automating all of this.
+
 ## Installing and customizing Spotify
 
 First, the latest version of Spotify should be installed:
@@ -43,14 +45,7 @@ theme, which can be applied by running the following:
 	$ spicetify config current_theme Adapta-Nokto
 	$ spicetify-apply
 
-I can also recommend the
-[Nord](https://github.com/morpheusthewhite/spicetify-themes/tree/master/Nord) theme,
-which can be applied by running the following:
-
-	$ spicetify config current_theme Nord
-	$ spicetify-apply
-
-I also like the
+As an example, I will also demonstrate the installation of the
 [Elementary](https://github.com/morpheusthewhite/spicetify-themes/tree/master/Elementary) theme,
 which requires Open Sans and Raleway to be installed:
 
