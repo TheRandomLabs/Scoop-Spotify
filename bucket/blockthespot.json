@@ -15,7 +15,7 @@
             "",
             "$null, $bucket = find_manifest($app)",
             "$bucketdir = Find-BucketDirectory($bucket)",
-            "Copy-Item \"$bucketdir\\..\\scripts\\blockthespot.ps1\" -Destination \"$dir\\blockthespot.ps1\"",
+            "Copy-Item \"$bucketdir\\..\\scripts\\blockthespot.ps1\" -Destination $dir",
             "& \"$dir\\blockthespot.ps1\""
         ]
     },
