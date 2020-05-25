@@ -8,6 +8,7 @@
     "hash": "b177253974156b45382e01a29ef590e63127c108f81061192661d4bcca8033fd",
     "notes": [
         "The Elementary theme requires the Open Sans and Raleway fonts:",
+        "scoop bucket add nerd-fonts",
         "sudo scoop install open-sans raleway",
         "The WintergatanBlueprint theme requires the Ubuntu font:",
         "scoop bucket add nerd-fonts",
