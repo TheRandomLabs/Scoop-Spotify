@@ -1,5 +1,5 @@
 {
-    "version": "1.1.32.618.gda5638a6",
+    "version": "1.1.33.569.gced9e0f5",
     "description": "Digital music service.",
     "homepage": "https://www.spotify.com/",
     "license": {
@@ -7,7 +7,7 @@
         "url": "https://www.spotify.com/au/legal/end-user-agreement/"
     },
     "url": "https://download.scdn.co/SpotifyFullSetup.exe",
-    "hash": "0c34185f5521a0adb63f327ac15eeba88ab4a0f3d515a4045d1868dd0166cd8b",
+    "hash": "5abf27318a30c4d18ea2d68a558d063678c375e7978dce73990631099fbaaf05",
     "notes": "--purge should be used to fully uninstall this package.",
     "installer": {
         "script": [
@@ -57,9 +57,11 @@
     "persist": "config.ini",
     "checkver_": {
         "script": [
-            "Invoke-WebRequest https://download.scdn.co/SpotifyFullSetup.exe -OutFile 'SpotifyFullSetup.exe'",
-            "$version = Get-ChildItem SpotifyFullSetup.exe | ForEach-Object { $_.VersionInfo.ProductVersion }",
-            "Remove-Item 'SpotifyFullSetup.exe'",
+            "$download_url = 'https://download.scdn.co/SpotifyFullSetup.exe'",
+            "$download = cache_path $app 'unknown' $download_url",
+            "do_dl $download_url $download",
+            "$version = (Get-Item $download).VersionInfo.ProductVersion",
+            "Move-Item -Force $download -Destination (cache_path $app $version $download_url)",
             "return $version"
         ],
         "regex": "(.+)"
