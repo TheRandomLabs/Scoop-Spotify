@@ -139,8 +139,6 @@ ensures that BlockTheSpot is enabled if it is installed.
 
 ### genius-spicetify
 
-* Installing or updating genius-spicetify automatically applies the Spicetify configuration and
-preserves BlockTheSpot if it is installed.
 * See [here](https://github.com/khanhas/genius-spicetify#musicxmatch) to configure a custom
 Musixmatch user token. `manifest.json` can be found at
 `~\.spicetify\CustomApps\genius\manifest.json`.
@@ -175,6 +173,10 @@ $ spicetify-config-remove custom_apps <app>
 ```powershell
 $ spicetify-config-remove extensions <extension>
 ```
+
+### spicetify-jqbx
+
+* This requires Spotify Premium.
 
 ### spicetify-themes
 
