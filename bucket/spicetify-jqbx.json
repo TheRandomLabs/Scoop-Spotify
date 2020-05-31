@@ -25,7 +25,6 @@
             "Remove-Item -ErrorAction Ignore -Recurse $spicetify_jqbx_dir",
             "Copy-Item -Force -Recurse \"$dir\\spicetify-jqbx-$version\" -Destination $spicetify_jqbx_dir",
             "",
-            "",
             "$spotify_running = Get-Process -ErrorAction Ignore -Name Spotify",
             "init-spicetify-config",
             "spicetify config custom_apps spicetify-jqbx --quiet",
