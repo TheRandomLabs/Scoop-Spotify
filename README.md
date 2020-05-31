@@ -12,6 +12,9 @@ A [Scoop](https://github.com/lukesampson/scoop) bucket for Spotify, Spicetify an
 
 ...I've spent an unhealthy amount of time on automating all of this.
 
+Also check out my [personal bucket](https://github.com/TheRandomLabs/Scoop-TheRandomLabs)
+and my [Python bucket](https://github.com/TheRandomLabs/Scoop-Python)!
+
 ## Installing and customizing Spotify
 
 First, the latest version of Spotify should be installed:
