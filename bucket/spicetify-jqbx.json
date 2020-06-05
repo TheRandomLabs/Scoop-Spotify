@@ -20,14 +20,14 @@
             "    exit 1",
             "}",
             "",
-            "$spicetify_jqbx_dir = \"$env:USERPROFILE\\.spicetify\\CustomApps\\spicetify-jqbx\"",
+            "$spicetify_jqbx_dir = \"$env:USERPROFILE\\.spicetify\\CustomApps\\JQBX\"",
             "",
             "Remove-Item -ErrorAction Ignore -Recurse $spicetify_jqbx_dir",
             "Copy-Item -Force -Recurse \"$dir\\spicetify-jqbx-$version\" -Destination $spicetify_jqbx_dir",
             "",
             "$spotify_running = Get-Process -ErrorAction Ignore -Name Spotify",
             "init-spicetify-config",
-            "spicetify config custom_apps spicetify-jqbx --quiet",
+            "spicetify config custom_apps JQBX --quiet",
             "spicetify-apply -quiet",
             "if ($spotify_running) { Start-Process $spotify_path }"
         ]
@@ -35,7 +35,7 @@
     "uninstaller": {
         "script": [
             "Remove-Item -Recurse -ErrorAction Ignore \"$env:USERPROFILE\\.spicetify\\CustomApps\\spicetify-jqbx\"",
-            "spicetify-config-remove custom_apps spicetify-jqbx",
+            "spicetify-config-remove custom_apps JQBX",
             "init-spicetify-config-and-apply"
         ]
     },
