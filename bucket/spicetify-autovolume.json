@@ -17,6 +17,7 @@
             "    Write-Host \"$app cannot be installed globally.\" -Foreground Red",
             "    exit 1",
             "}",
+            "",
             "$spotify_path = get-spotify-path",
             "",
             "if (-not (Test-Path $spotify_path)) {",
