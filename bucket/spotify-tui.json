@@ -19,9 +19,7 @@
         ]
     },
     "uninstaller": {
-        "script": [
-            "if ($purge) { Remove-Item -Recurse -Force \"$env:USERPROFILE\\.config\\spotify-tui\" }"
-        ]
+        "script": "if ($purge) { Remove-Item -Recurse -Force \"$env:USERPROFILE\\.config\\spotify-tui\" }"
     },
     "bin": [
         "spt.exe",
