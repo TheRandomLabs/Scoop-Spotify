@@ -3,7 +3,7 @@ Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://raw.
 scoop install git
 
 scoop bucket add spotify https://github.com/TheRandomLabs/Scoop-Spotify.git
-scoop install spotify-latest blockthespot spicetify-cli spicetify-themes genius-spicetify spicetify-autovolume
+scoop install spotify-latest blockthespot spicetify-cli spicetify-themes genius-spicetify
 
 spicetify config current_theme Adapta-Nokto --quiet
 spicetify-enable-devtool -quiet
