@@ -24,6 +24,7 @@
             "Stop-Process -ErrorAction Ignore -Name Spotify",
             "Start-Process -Wait \"$dir\\SpotifyFullSetup.exe\" -ArgumentList '/extract', \"`\"$dir`\"\"",
             "Remove-Item \"$dir\\SpotifyFullSetup.exe\"",
+            "Remove-Item \"$dir\\SpotifyMigrator.exe\"",
             "",
             "icacls \"$env:LOCALAPPDATA\\Spotify\\Update\" /reset /T | Out-Null",
             "Remove-Item -ErrorAction Ignore -Recurse \"$env:LOCALAPPDATA\\Spotify\\Update\" | Out-Null",
