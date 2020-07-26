@@ -1,11 +1,11 @@
 {
-    "version": "2020-06-05T13.57.54",
+    "version": "2020-07-26T15.31.59",
     "description": "Custom app for Spicetify that fetches lyrics from Genius and Musixmatch.",
     "homepage": "https://github.com/khanhas/genius-spicetify",
     "license": "Freeware",
     "depends": "spicetify-cli",
     "url": "https://github.com/khanhas/genius-spicetify/archive/master.zip",
-    "hash": "50b280761311c41277305115756c6f80d52fdd09bddd0946febf1a9e1dfd9ff8",
+    "hash": "5281561e8242e74f0c87c04672e4adc81690619fff72e98a6cf29b9c3c16832a",
     "notes": [
         "See here to configure a Musixmatch user token: https://github.com/khanhas/genius-spicetify#musicxmatch",
         "--purge should be used to fully uninstall this package."
