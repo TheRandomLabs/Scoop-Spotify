@@ -7,7 +7,7 @@
         "url": "https://www.spotify.com/au/legal/end-user-agreement/"
     },
     "url": "https://download.scdn.co/SpotifyFullSetup.exe",
-    "hash": "ee2957008b72e044738bcbd4816fe32698ee361b9462556bad5354768707873a",
+    "hash": "752f3b4b5e41cc7948ed8050099bdca1bb109a3b64d81292b1da3486a5a55e59",
     "notes": "--purge should be used to fully uninstall this package.",
     "installer": {
         "script": [
