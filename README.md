@@ -15,6 +15,14 @@ A [Scoop](https://github.com/lukesampson/scoop) bucket for Spotify, Spicetify an
 Also check out my [personal bucket](https://github.com/TheRandomLabs/Scoop-Bucket)
 and my [Python bucket](https://github.com/TheRandomLabs/Scoop-Python)!
 
+## spotify-latest: hash check failed
+
+* If the `spotify-latest` manifest has recently been updated, this is because depending on the
+region, the old installer may stay cached for a bit. To work around this issue, pass the
+`-s` or `--skip` flag to Scoop when updating the package.
+* If the `spotify-latest` manifest has not recently been updated, this is because autoupdates
+currently cannot be run automatically. Create an issue and I'll get to it pretty quickly.
+
 ## Notes
 
 * None of the packages in this bucket can be installed globally.
