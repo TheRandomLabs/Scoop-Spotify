@@ -56,7 +56,7 @@
         ]
     ],
     "persist": "config.ini",
-    "checkver_": {
+    "checkver": {
         "script": [
             "$download_url = 'https://download.scdn.co/SpotifyFullSetup.exe'",
             "$download = cache_path $app 'unknown' $download_url",
