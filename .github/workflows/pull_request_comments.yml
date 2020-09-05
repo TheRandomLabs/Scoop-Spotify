@@ -7,13 +7,14 @@ on:
 jobs:
   pullRequestValidator:
     name: Pull Request Validator
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - uses: actions/checkout@master
       - name: Validate Pull Request
-        uses: Ash258/Scoop-GithubActions@stable
+        uses: Ash258/Scoop-GithubActions@stable-win
         if: startsWith(github.event.comment.body, '/verify')
         env:
+          SHOVEL: "1"
           GITH_EMAIL: therandomlabsinc@gmail.com
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
