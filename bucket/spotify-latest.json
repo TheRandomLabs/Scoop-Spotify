@@ -59,10 +59,10 @@
     "checkver": {
         "script": [
             "$download_url = 'https://download.scdn.co/SpotifyFullSetup.exe'",
-            "$download = cache_path $app 'unknown' $download_url",
+            "$download = cache_path spotify-latest 'unknown' $download_url",
             "do_dl $download_url $download",
             "$version = (Get-Item $download).VersionInfo.ProductVersion",
-            "Move-Item -Force $download -Destination (cache_path $app $version $download_url)",
+            "Move-Item -Force $download -Destination (cache_path spotify-latest $version $download_url)",
             "return $version"
         ],
         "regex": "(.+)"
