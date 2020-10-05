@@ -1,13 +1,13 @@
 {
-    "version": "0.21.0",
+    "version": "0.22.0",
     "description": "Spotify client for the terminal.",
     "homepage": "https://github.com/Rigellute/spotify-tui",
     "license": "MIT",
     "notes": "--purge should be used to fully uninstall this package.",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Rigellute/spotify-tui/releases/download/v0.21.0/spotify-tui-windows.tar.gz",
-            "hash": "9b5e6a4f4a1dc1e5e7721fcfb9eed65d7e563801af71556562586dad20cfd10b"
+            "url": "https://github.com/Rigellute/spotify-tui/releases/download/v0.22.0/spotify-tui-windows.tar.gz",
+            "hash": "dc0b3164a19000c79af8129a1b8c4409ad616622623f42a3b87d4a2271c3cffe"
         }
     },
     "installer": {
