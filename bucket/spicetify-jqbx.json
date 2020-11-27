@@ -35,8 +35,10 @@
     "uninstaller": {
         "script": [
             "Remove-Item -Recurse -ErrorAction Ignore \"$env:USERPROFILE\\.spicetify\\CustomApps\\spicetify-jqbx\"",
-            "spicetify-config-remove custom_apps JQBX",
-            "init-spicetify-config-and-apply"
+            "if (installed spicetify-cli) {",
+            "    spicetify-config-remove custom_apps JQBX",
+            "    init-spicetify-config-and-apply",
+            "}"
         ]
     },
     "checkver": "github",

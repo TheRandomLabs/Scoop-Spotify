@@ -66,7 +66,8 @@
             "Start-Process -Wait \"$dir\\Spotify.exe\" -ArgumentList '/Uninstall', '/Silent'",
             "if (-not $purge) { Move-Item -ErrorAction Ignore -Force \"$env:APPDATA\\Spotify.original\" -Destination \"$env:APPDATA\\Spotify\" }",
             "icacls \"$env:LOCALAPPDATA\\Spotify\\Update\" /grant Everyone:R | Out-Null",
-            "Remove-Item -ErrorAction Ignore -Recurse -Force \"$env:LOCALAPPDATA\\Spotify\\Update\""
+            "if ($purge) { Remove-Item -ErrorAction Ignore -Recurse -Force \"$env:LOCALAPPDATA\\Spotify\" }",
+            "else { Remove-Item -ErrorAction Ignore -Recurse -Force \"$env:LOCALAPPDATA\\Spotify\\Update\" }"
         ]
     },
     "bin": "Spotify.exe",

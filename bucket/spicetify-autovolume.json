@@ -53,8 +53,10 @@
     "uninstaller": {
         "script": [
             "if ($purge) { Remove-Item -ErrorAction Ignore \"$env:USERPROFILE\\.spicetify\\Extensions\\autoVolume.js\" }",
-            "spicetify-config-remove extensions autoVolume.js",
-            "init-spicetify-config-and-apply"
+            "if (installed spicetify-cli) {",
+            "    spicetify-config-remove extensions autoVolume.js",
+            "    init-spicetify-config-and-apply",
+            "}"
         ]
     },
     "checkver": {

@@ -21,6 +21,8 @@
     },
     "uninstaller": {
         "script": [
+            "if (!(installed spotify-latest)) { return }",
+            "",
             "$spotify_running = Get-Process -ErrorAction Ignore -Name Spotify",
             "Stop-Process -ErrorAction Ignore -Name Spotify | Out-Null",
             "",
