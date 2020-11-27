@@ -16,8 +16,8 @@
             "    exit 1",
             "}",
             "",
-            "if (Test-Path (appdir spotify-blockthespot)) {",
-            "    Write-Host \"$app and spotify-blockthespot cannot both be installed at the same time.\" -Foreground Red",
+            "if (installed spotify-with-blockthespot) {",
+            "    Write-Host \"$app and spotify-with-blockthespot cannot both be installed at the same time.\" -Foreground Red",
             "    exit 1",
             "}",
             "",
@@ -35,8 +35,8 @@
         ]
     },
     "post_install": [
-        "if (Test-Path (appdir spicetify-cli)) { init-spicetify-config-and-apply }",
-        "elseif (Test-Path (appdir blockthespot)) { blockthespot }"
+        "if (installed spicetify-cli) { init-spicetify-config-and-apply }",
+        "elseif (installed blockthespot) { blockthespot }"
     ],
     "uninstaller": {
         "script": [
