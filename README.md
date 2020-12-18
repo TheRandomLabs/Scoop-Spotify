@@ -4,7 +4,7 @@
 <!-- markdownlint-disable MD040 -->
 <!-- markdownlint-disable MD046 -->
 
-# Scoop-Spotify
+# Scoop-Spotify [![Build status](https://ci.appveyor.com/api/projects/status/0q9mhsk39dw59ej5/branch/master?svg=true)](https://ci.appveyor.com/project/TheRandomLabs/scoop-spotify/branch/master)
 
 A [Scoop](https://github.com/lukesampson/scoop) bucket for Spotify, Spicetify and related packages.
 
