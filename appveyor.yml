@@ -2,10 +2,6 @@ version: "{build}-{branch}"
 branches:
   except:
     - gh-pages
-skip_commits:
-  files:
-    - "**/*.md"
-    - ".vscode/**/*"
 image: Visual Studio 2019
 init:
   - ps: if (!(Test-Path "$env:SCOOP")) { git clone -q --depth=1 --branch="NEW" "https://github.com/Ash258/Scoop-Core" "$env:SCOOP" }
