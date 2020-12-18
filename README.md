@@ -8,7 +8,7 @@
 
 A [Scoop](https://github.com/lukesampson/scoop) bucket for Spotify, Spicetify and related packages.
 
-	$ scoop bucket add spotify https://github.com/TheRandomLabs/Scoop-Spotify.git
+    $ scoop bucket add spotify https://github.com/TheRandomLabs/Scoop-Spotify.git
 
 ...I've spent an unhealthy amount of time on automating all of this.
 
@@ -143,49 +143,49 @@ location.
 a collection of community-created themes for Spicetify. Obviously, this should also be installed
 locally:
 
-	$ scoop install spicetify-themes
+    $ scoop install spicetify-themes
 
 [google-spicetify](https://github.com/khanhas/google-spicetify) is also available:
 
-	$ scoop install google-spicetify
+    $ scoop install google-spicetify
 
 I can recommend the
 [Adapta-Nokto](https://github.com/morpheusthewhite/spicetify-themes/tree/master/Adapta-Nokto)
 theme, which can be applied by running the following:
 
-	$ spicetify config current_theme Adapta-Nokto
-	$ spicetify-apply
+    $ spicetify config current_theme Adapta-Nokto
+    $ spicetify-apply
 
 As an example, I will also demonstrate the installation of the
 [Elementary](https://github.com/morpheusthewhite/spicetify-themes/tree/master/Elementary) theme,
 which requires Open Sans and Raleway to be installed:
 
-	$ scoop bucket add nerd-fonts
-	$ sudo scoop install Open-Sans Raleway
-	$ spicetify config current_theme Elementary
-	$ spicetify-apply
+    $ scoop bucket add nerd-fonts
+    $ sudo scoop install Open-Sans Raleway
+    $ spicetify config current_theme Elementary
+    $ spicetify-apply
 
 To install spicetify-cli and apply a theme silently, the theme can be configured before installing
 spicetify-themes. When any of the Spicetify packages are installed, the current configuration
 is applied, and if Spotify was open previously, it is reopened.
 
-	$ scoop install spicetify-cli
-	$ spicetify config current_theme Elementary
-	$ scoop install spicetify-themes
+    $ scoop install spicetify-cli
+    $ spicetify config current_theme Elementary
+    $ scoop install spicetify-themes
 
 [genius-spicetify](https://github.com/khanhas/genius-spicetify) can be installed to fetch lyrics
 from Genius or Musixmatch:
 
-	$ scoop install genius-spicetify
+    $ scoop install genius-spicetify
 
 [spicetify-autoVolume](https://github.com/amanharwara/spicetify-autoVolume#changing-the-intervalminimum-volume)
 can be installed to automatically decrease the volume at specific intervals of time:
 
-	$ scoop install spicetify-autovolume
+    $ scoop install spicetify-autovolume
 
 [BlockTheSpot](https://github.com/mrpond/BlockTheSpot) can be installed to block advertisements:
 
-	$ scoop install blockthespot
+    $ scoop install blockthespot
 
 All of the above packages can be updated through Scoop.
 
