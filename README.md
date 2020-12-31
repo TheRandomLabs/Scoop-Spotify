@@ -104,6 +104,15 @@ $ scoop bucket add nerd-fonts
 $ sudo scoop install Ubuntu-NF
 ```
 
+### Spotify (latest)
+
+* This is the latest version of Spotify.
+* Unlike [Ash258's version](https://github.com/Ash258/scoop-Ash258/blob/master/bucket/Spotify.json),
+this version installs completely silently and to the Scoop directory.
+* Spotify's built-in updater is disabled, and Scoop should be used to update it instead.
+* Spotify should be installed locally and not globally.
+* This cannot be installed concurrently with `spotify-with-blockthespot`.
+
 ### Spotify with BlockTheSpot
 
 * This is an outdated version of Spotify (1.1.4.197.g92d52c4f) with an
@@ -113,15 +122,6 @@ $ sudo scoop install Ubuntu-NF
 * Spotify with BlockTheSpot should be installed locally and not globally.
 * Installation and uninstallation of this package require administrator privileges.
 * This cannot be installed concurrently with `spotify-latest`.
-
-### Spotify (latest)
-
-* This is the latest version of Spotify.
-* Unlike [Ash258's version](https://github.com/Ash258/scoop-Ash258/blob/master/bucket/Spotify.json),
-this version installs completely silently and to the Scoop directory.
-* Spotify's built-in updater is disabled, and Scoop should be used to update it instead.
-* Spotify should be installed locally and not globally.
-* This cannot be installed concurrently with `spotify-with-blockthespot`.
 
 ## Installing and customizing Spotify
 
