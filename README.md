@@ -70,17 +70,6 @@ before running `spicetify apply` to ensure that changes are applied every time.
 * For similar reasons, `spicetify-enable-devtool` and `spicetify-disable-devtool` should be run
 instead of `spicetify enable-devtool` and `spicetify disable-devtool`.
 * The three above commands also support the `-quiet` switch.
-* To remove a custom app from the configuration, run:
-
-```powershell
-$ spicetify-config-remove custom_apps <app>
-```
-
-* To remove an extension from the configuration, run:
-
-```powershell
-$ spicetify-config-remove extensions <extension>
-```
 
 ### spicetify-jqbx
 
