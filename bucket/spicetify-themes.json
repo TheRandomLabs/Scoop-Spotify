@@ -5,7 +5,7 @@
     "license": "MIT",
     "depends": "spicetify-cli",
     "url": "https://github.com/morpheusthewhite/spicetify-themes/archive/master.zip",
-    "hash": "b20ebc51efe66726c4d38c4110d4bb7e282223d6d503db9094278c067ebad169",
+    "hash": "bfd6baf3261ecc5c31ab8587137397d44a1d3f016a079b9fbc7420968c263546",
     "notes": [
         "The Elementary theme requires the Open Sans and Raleway fonts:",
         "scoop bucket add nerd-fonts",
