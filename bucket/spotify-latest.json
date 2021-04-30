@@ -1,5 +1,5 @@
 {
-    "version": "1.1.57.443.ga029a6c4",
+    "version": "1.1.58.820.g2ae50076",
     "description": "Digital music service.",
     "homepage": "https://www.spotify.com/",
     "license": {
@@ -7,7 +7,7 @@
         "url": "https://www.spotify.com/au/legal/end-user-agreement/"
     },
     "url": "https://download.scdn.co/SpotifyFullSetup.exe",
-    "hash": "9d193c3bfb7f64993c27d73d824b353795b0728f60745dc788d69c955af9b8bb",
+    "hash": "cea43df44352e47db010c0b0ba47520b1d988bb6772fa3347d3ba2476c6675b1",
     "notes": "--purge should be used to fully uninstall this package.",
     "installer": {
         "script": [
