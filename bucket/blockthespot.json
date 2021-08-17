@@ -1,11 +1,11 @@
 {
-    "version": "2021.8.01.38",
+    "version": "2021.8.17.39",
     "description": "Removes advertisements in Spotify.",
     "homepage": "https://github.com/mrpond/BlockTheSpot",
     "license": "MIT",
     "depends": "spotify-latest",
-    "url": "https://github.com/mrpond/BlockTheSpot/releases/download/2021.8.01.38/chrome_elf.zip",
-    "hash": "94c839265c7c9bd947d5e2b02a71d4d8b1a44623b1f6d3e5478725842f883520",
+    "url": "https://github.com/mrpond/BlockTheSpot/releases/download/2021.8.17.39/chrome_elf.zip",
+    "hash": "f22e894695e21c223a63b6212af5e86b6160eba3b21416cb5b1eebdd47097257",
     "installer": {
         "script": [
             "if ($global) {",
