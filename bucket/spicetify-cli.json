@@ -1,5 +1,5 @@
 {
-    "version": "2.6.3",
+    "version": "2.6.4",
     "description": "Tool for customizing the Spotify client.",
     "homepage": "https://github.com/khanhas/spicetify-cli",
     "license": "GPL-3.0-only",
@@ -9,8 +9,8 @@
             "spotify-with-blockthespot"
         ]
     },
-    "url": "https://github.com/khanhas/spicetify-cli/releases/download/v2.6.3/spicetify-2.6.3-windows-x64.zip",
-    "hash": "889e724f2dfb806176517f39e627f2157de28a209e65df8c4be35a0bc91aae30",
+    "url": "https://github.com/khanhas/spicetify-cli/releases/download/v2.6.4/spicetify-2.6.4-windows-x64.zip",
+    "hash": "4a6875583c651ad901ef4d1d2a4fa50c2e2c6a17e68cf633a3af32c4058446df",
     "notes": [
         "Run `spicetify-apply` instead of `spicetify apply` to ensure changes are applied correctly, especially if `blockthespot` is also installed.",
         "For similar reasons, `spicetify-enable-devtool` and `spicetify-disable-devtool` should be run instead of `spicetify enable-devtool` and `spicetify disable-devtool`.",
