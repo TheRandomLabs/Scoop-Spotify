@@ -1,11 +1,11 @@
 {
-    "version": "2022-05-07T21.36.36",
+    "version": "2022-05-13T13.09.09",
     "description": "Community-created themes for Spicetify.",
     "homepage": "https://github.com/morpheusthewhite/spicetify-themes",
     "license": "MIT",
     "depends": "spicetify-cli",
     "url": "https://github.com/morpheusthewhite/spicetify-themes/archive/master.zip",
-    "hash": "240e3b54ed835c6e77344a5a5bffe716894e060e95ce0d10f1834b3cc90ea13c",
+    "hash": "16c2b748cc1a92e3f8212543d2eeec224a423b60962ca14ce7a5cd9ca4cb72a4",
     "notes": [
         "The Elementary theme requires the Open Sans and Raleway fonts:",
         "scoop bucket add nerd-fonts",
