@@ -29,7 +29,7 @@
             "icacls \"$env:LOCALAPPDATA\\Spotify\\Update\" /reset /T | Out-Null",
             "Remove-Item -ErrorAction Ignore -Recurse \"$env:LOCALAPPDATA\\Spotify\\Update\" | Out-Null",
             "New-Item -ErrorAction Ignore \"$env:LOCALAPPDATA\\Spotify\\Update\" -ItemType Directory | Out-Null",
-            "icacls \"$env:LOCALAPPDATA\\Spotify\\Update\" /deny Everyone:R | Out-Null",
+            "icacls \"$env:LOCALAPPDATA\\Spotify\\Update\" /deny *S-1-1-0:R | Out-Null",
             "",
             "New-Item \"$dir\\config.ini\" | Out-Null # Persist for BlockTheSpot"
         ]
