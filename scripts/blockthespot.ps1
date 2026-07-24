@@ -17,12 +17,11 @@ if ((Split-Path $spotify_dir_parent -leaf) -ne "spotify-latest") {
     }
 }
 
-if ((Get-FileHash "$spotify_dir\chrome_elf.dll").Hash -ne (Get-FileHash "$PSScriptRoot\chrome_elf.dll").Hash) {
+if ((Get-FileHash -ErrorAction SilentlyContinue "$spotify_dir\dpapi.dll").Hash -ne (Get-FileHash "$PSScriptRoot\dpapi.dll").Hash) {
     $spotify_running = Get-Process -ErrorAction Ignore -Name Spotify
     Stop-Process -ErrorAction Ignore -Name Spotify | Out-Null
 
-    Move-Item -Force "$spotify_dir\chrome_elf.dll" -Destination "$spotify_dir\chrome_elf.dll.original"
-    Copy-Item "$PSScriptRoot\chrome_elf.dll" -Destination "$spotify_dir"
+    Copy-Item "$PSScriptRoot\dpapi.dll" -Destination "$spotify_dir"
 
     if (-not (Get-Content -ErrorAction Ignore "$spotify_dir\config.ini")) { Copy-Item "$PSScriptRoot\config.ini" -Destination "$spotify_dir" }
 
